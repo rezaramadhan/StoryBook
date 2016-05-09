@@ -1,0 +1,8 @@
+menunya klik2 biasa, dalemnnya menu masih dibikin, diusahain secepatnya
+menu setting juga lagi dibuat
+terus itu buat judulnya ada kemungkinan diganti jadi bentuknya bukan gitu, nanti bisa di replace kan ya?
+terus interaktif buat disini, kalo bikinn pohonnya jadi bergeter gitu kalo touch bisa nggak??
+terus pas pohonnya geter gugur daun2 gitu dari atas..
+ini aku bikin resolusinya 1920 x 1080 .. segitu cukup/sesuai apa gimana??
+
+makasih
