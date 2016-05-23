@@ -76,7 +76,6 @@ public class panahController : MonoBehaviour {
                 GameObject.Find("narasi").GetComponent<Renderer>().material.color = new Color(0, 0, 0, 0);
 
                 if (swipeDistVertical > minSwipeDistY) {
-                    GameObject.Find("narasi").GetComponent<Renderer>().material.color = new Color(0, 0, 0, 0);
                     SceneManager.LoadScene("4");
                 } else {
                     Debug.Log("not enough");
