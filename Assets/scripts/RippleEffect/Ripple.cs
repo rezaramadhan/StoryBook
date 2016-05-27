@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class Ripple : MonoBehaviour {
 
@@ -10,17 +11,20 @@ public class Ripple : MonoBehaviour {
 	public Vector2[] impactPos;
 	public float[] distance;
 	public float speed;
-
+	public float maxDelay;
+	private int counter;
 	Mesh m;
 	Renderer r;
 	// Use this for initialization
 	void Start () {
 		m = GetComponent<MeshFilter> ().mesh;
 		r = GetComponent<Renderer> ();
+		counter = 0;
 	}
 
 	// Update is called once per frame
 	void Update () {
+		counter++;
 		for (int i = 0; i < 4; i++) {
 			wave [i] = wave[i] * 0.95f;
 			if (wave [i] > 0) {
@@ -34,18 +38,16 @@ public class Ripple : MonoBehaviour {
 				wave [i] = 0;
 			}
 		}
+		if (counter > maxDelay) {
+			SceneManager.LoadScene ("2");
+		}
 	}
 
 	void  OnMouseDown() {
-		float midX = Screen.width/2;
-		float midZ = Screen.height/2;
-		//float x = Input.mousePosition.x - midX;
-		//float z = Input.mousePosition.y - midZ;
-
 		float x = Camera.main.ScreenToWorldPoint (Input.mousePosition).x;
 		float z = Camera.main.ScreenToWorldPoint (Input.mousePosition).z;
 		Debug.Log ("Here X" + Input.mousePosition.x + " Y" + Input.mousePosition.y + " Z" + Input.mousePosition.z + "" +
-			"relative X" + x +" z"+ z);
+			"relative X" + x +" z"+ z + " time " + Time.deltaTime);
 		waveNumber++;
 		if (waveNumber == 5) {
 			waveNumber = 1;

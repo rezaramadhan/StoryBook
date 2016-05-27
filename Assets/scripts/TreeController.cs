@@ -17,7 +17,6 @@ public class TreeController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
 		RaycastHit2D hit;
 		if (Input.GetMouseButtonDown (0)) {
 			hit = Physics2D.Raycast (Camera.main.ScreenToWorldPoint (Input.mousePosition), Vector2.zero);
