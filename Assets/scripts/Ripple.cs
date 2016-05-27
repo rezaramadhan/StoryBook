@@ -62,8 +62,8 @@ public class Ripple : MonoBehaviour {
 		r.material.SetFloat ("_zImpact" + waveNumber, impactPos[waveNumber-1].y);
 
 
-		r.material.SetFloat ("_OffsetX" + waveNumber, distanceX/m.bounds.size.x * 10f);
-		r.material.SetFloat ("_OffsetZ" + waveNumber, distanceZ/m.bounds.size.z * 10f);
+		r.material.SetFloat ("_OffsetX" + waveNumber, distanceX/m.bounds.size.x * 15f);
+		r.material.SetFloat ("_OffsetZ" + waveNumber, distanceZ/m.bounds.size.z * 15f);
 
 		r.material.SetFloat ("_Wave" + waveNumber, magnitude);
 		wave [waveNumber - 1] = magnitude;
