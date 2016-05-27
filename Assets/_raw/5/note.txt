@@ -1,0 +1,15 @@
+urutan layer:
+-layer belakang
+-kodok
+-ikan
+-layer depan
+
+interaksi, ikan digeser sampe nyentuh kodok
+
+udah nyentuh nanti ada animasi ulangan,
+si ikannya gerak dari posisi awal, nyetuh kodok terus
+kodoknya loncat ke atas, ikannya keracunan tenggelam ke dasar
+sfx airnya dipake buat yang halaman 4 juga, (sfx airnya stay sepanjang halaman ya jadi latar buat suasana air)
+terus boing jumpnya di taro pas kodoknya loncat
+
+terus swap up buat transisi ke halaman selanjutnya
