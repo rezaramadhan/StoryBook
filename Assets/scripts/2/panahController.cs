@@ -59,6 +59,7 @@ public class panahController : MonoBehaviour {
         RaycastHit2D hit;
         if (Input.GetMouseButtonDown(0)) {
             hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+            Debug.Log("Touched " + hit.transform.name);
             if (hit.collider != null && hit.transform.gameObject.name == transform.name && isDoneFade) {
                 Debug.Log("Touched");
                 isTouched = true;
