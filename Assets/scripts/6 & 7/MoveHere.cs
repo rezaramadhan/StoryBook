@@ -23,7 +23,7 @@ public class MoveHere : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (startMove) {
-			Debug.Log ("Moving" + tupai.transform.position + "" +currentPos);
+			//Debug.Log ("Moving" + tupai.transform.position + "" +currentPos);
 			currentPos -= moveTo * moveSpeed;
 			tupai.transform.position = currentPos;
 			delta = currentPos - endPos;

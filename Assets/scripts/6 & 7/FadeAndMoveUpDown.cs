@@ -26,7 +26,7 @@ public class FadeAndMoveUpDown : MonoBehaviour {
 
 		endPos = currentPos = startPos = transform.position;
 		endPos.y = endPos.y - 0.75f;
-		Debug.Log (startPos + " " +endPos);
+		//Debug.Log (startPos + " " +endPos);
 	}
 	
 	// Update is called once per frame
