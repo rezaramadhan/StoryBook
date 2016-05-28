@@ -8,6 +8,7 @@ public class ChangeScene : MonoBehaviour {
     void OnMouseDown()
     {
         SceneManager.LoadScene(changeLevel);
+
     }
 	// Use this for initialization
 	void Start () {
