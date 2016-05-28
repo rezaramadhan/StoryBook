@@ -6,6 +6,8 @@ public class ikanController5 : MonoBehaviour {
     public float incMoveX;
     public bool isShouldFaint = false;
     public float deltaFaint;
+	public GameObject narasi;
+
     //public float threshold;
     private Vector2 currentPos;
     private Vector2 startPos;
@@ -66,7 +68,7 @@ public class ikanController5 : MonoBehaviour {
     }
 
     void faint() {
-        GameObject.Find("narasi").GetComponent<narasiControllet5>().changeNarasi();
+		narasi.GetComponent<narasiControllet5>().changeNarasi();
         if (transform.position.y >= startPos.y - deltaFaint) {
             Vector2 currentPos = transform.position;
             transform.position = new Vector2(currentPos.x, currentPos.y - 0.03f);
