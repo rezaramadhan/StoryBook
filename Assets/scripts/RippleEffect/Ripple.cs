@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine.SceneManagement;
 
 public class Ripple : MonoBehaviour {
-
+    public string changeLevel;
 	private int waveNumber;
 	public float distanceX, distanceZ;
 	public float[] wave;
@@ -39,7 +39,7 @@ public class Ripple : MonoBehaviour {
 			}
 		}
 		if (counter > maxDelay) {
-			SceneManager.LoadScene ("2");
+			SceneManager.LoadScene (changeLevel);
 		}
 	}
 

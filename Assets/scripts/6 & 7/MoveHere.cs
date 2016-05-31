@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class MoveHere : MonoBehaviour {
+    public string changeLevel;
 	public GameObject tupai;
 	public GameObject panah;
 	public float moveSpeed;
@@ -31,6 +33,7 @@ public class MoveHere : MonoBehaviour {
 				Debug.Log ("end");
 				startMove = false;
 				tupai.transform.position = endPos;
+                SceneManager.LoadScene(changeLevel);
 			}
 		}
 	}
