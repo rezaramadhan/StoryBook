@@ -19,10 +19,7 @@ public class BackFade : MonoBehaviour {
 	void SetBg() {
 		r = g[idx].GetComponent<Renderer> ();
 		currentColor = r.material.color;
-		idx++;
-		if (idx > 11) {
-			UnityEngine.SceneManagement.SceneManager.LoadScene ("Peta");
-		}
+        idx++;
 	}
 
 	// Update is called once per frame
@@ -35,7 +32,10 @@ public class BackFade : MonoBehaviour {
 	void OnMouseDown() {
 		Debug.Log ("a");
 		startFade = true;
-	}
+        if (idx > 11) {
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Peta");
+        }
+    }
 
 	void FadeOut() {
 		currentColor.a -= 1 * Time.deltaTime * fadeSpeed;
