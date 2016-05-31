@@ -13,7 +13,7 @@ public class checkFinished : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (nClicked >= 5) {
-			SceneManager.SetActiveScene(SceneManager.GetSceneByName("Peta"));
+			SceneManager.LoadScene("Peta2");
 		}
 	}
 }
