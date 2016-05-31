@@ -20,7 +20,7 @@ public class BackFade : MonoBehaviour {
 		r = g[idx].GetComponent<Renderer> ();
 		currentColor = r.material.color;
 		idx++;
-		if (idx >= g.Length) {
+		if (idx > 11) {
 			UnityEngine.SceneManagement.SceneManager.LoadScene ("Peta");
 		}
 	}
@@ -33,7 +33,7 @@ public class BackFade : MonoBehaviour {
 	}
 
 	void OnMouseDown() {
-		Debug.Log ("a" + idx);
+		Debug.Log ("a");
 		startFade = true;
 	}
 
