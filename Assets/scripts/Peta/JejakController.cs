@@ -6,10 +6,11 @@ public class JejakController : MonoBehaviour {
 	public GameObject jejakNonAktif;
 	public GameObject next;
 
-	//private bool isDragged = false;
-	//private bool triggered = false;
+	private bool isDragged = false;
+	private bool triggered = false;
 
-	//private bool isOutFromJejak = false;
+	private bool isOutFromJejak = false;
+
 	// Use this for initialization
 	void Start () {
 		next.SetActive (false);
@@ -17,32 +18,40 @@ public class JejakController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		/*if (isDragged) {
+		if (isDragged) {
 			Debug.Log (Input.mousePosition);
 			if (isKeluar()) {
-				isOutFromJejak = true;
+				triggered = true;
+				//Debug.Log ("true");
 			}
 		} else {
 		
 		}
 
 		if (triggered) {
-			Debug.Log ("Triggered");
-
-		}*/
+			//Debug.Log ("Triggered");
+			jejakNonAktif.SetActive (false);
+			jejakAktif.SetActive (true);
+			next.SetActive (true);	
+		}
 	}
 
 	void OnMouseDown() {
 		Debug.Log ("clicked");
-		//isDragged = true;
-		jejakNonAktif.SetActive (false);
-		jejakAktif.SetActive (true);
-		next.SetActive (true);	
-
+		isDragged = true;
 	}
 
 	void OnMouseUp() {
 		Debug.Log ("Released");
-		//isDragged = false;
+		isDragged = false;
+	}
+
+	bool isKeluar () {
+		Vector2 mouse = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+		float dist = Vector2.Distance (mouse, transform.position);
+		//dist -= 300;
+		bool retval = Mathf.Abs(dist) > 0.7f;
+		Debug.Log (mouse+""+transform.position+""+dist +" "+retval);
+		return (retval);
 	}
 }
