@@ -1,0 +1,8 @@
+ini halaman 1nya.. narasinya keluar setelah mataharinya keluar ..
+awan yang nutupin mataharinya harus di geser ke luar frame
+biar mataharinya bisa naik.. terus ransisi selanjutnya marahatinya 
+dijadiin kecil gede gitu buat sign kalo dia yang harus di tap buat
+ke halaman selanjutnya
+awalnya cuma ada nanti langsung fade out terus masuk ke halaman 2
+
+sound efeknya ada dari awal yaa
