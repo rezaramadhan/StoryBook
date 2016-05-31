@@ -24,8 +24,6 @@ public class JejakController : MonoBehaviour {
 				triggered = true;
 				//Debug.Log ("true");
 			}
-		} else {
-		
 		}
 
 		if (triggered) {
@@ -36,7 +34,7 @@ public class JejakController : MonoBehaviour {
 		}
 	}
 
-	void OnMouseDown() {
+	void OnMouseDown () {
 		Debug.Log ("clicked");
 		isDragged = true;
 	}

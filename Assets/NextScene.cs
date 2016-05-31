@@ -7,10 +7,9 @@ public class NextScene : MonoBehaviour {
 	private bool isLoaded = false;
 	public string nextScene;
 
-
 	// Use this for initialization
 	void Start () {
-		
+	
 	}
 	
 	// Update is called once per frame
@@ -20,5 +19,4 @@ public class NextScene : MonoBehaviour {
 			UnityEngine.SceneManagement.SceneManager.LoadScene (nextScene);
 		}
 	}
-
 }

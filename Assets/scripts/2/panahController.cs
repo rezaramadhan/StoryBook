@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class panahController : MonoBehaviour {
     //public float duration;
+    public string changeLevel;
     public float deltaFade;
     public float deltaMove;
     public float incMove;
@@ -74,10 +75,10 @@ public class panahController : MonoBehaviour {
                 float swipeDistVertical = startTouchPos.y - endTouchPos.y;
                 //float swipeDistVertical = ((new Vector3(0, endTouchPos.y, 0)) - new Vector3(0, endTouchPos.y, 0)).magnitude;
                 Debug.Log("SWIPE DIST = " + swipeDistVertical);
-                GameObject.Find("narasi").GetComponent<Renderer>().material.color = new Color(0, 0, 0, 0);
+                //GameObject.Find("narasi").GetComponent<Renderer>().material.color = new Color(0, 0, 0, 0);
 
                 if (swipeDistVertical > minSwipeDistY) {
-                    SceneManager.LoadScene("4");
+                    SceneManager.LoadScene(changeLevel);
                 } else {
                     Debug.Log("not enough");
                 }
